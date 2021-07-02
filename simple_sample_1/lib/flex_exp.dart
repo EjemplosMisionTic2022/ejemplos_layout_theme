@@ -7,6 +7,7 @@ class FlexExpand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // The safeArea lowers the child widgets below the OS data like clock of nutches
     return SafeArea(
       child: Scaffold(
         body: Column(
@@ -23,6 +24,11 @@ class FlexExpand extends StatelessWidget {
             Expanded(
               child: Container(),
             ),
+            ..._header(context, 'Flexible Column'),
+            _buildFlexibleColumn(),
+            Expanded(
+              child: Container(),
+            ),
             _buildFooter(context),
           ],
         ),
@@ -31,13 +37,13 @@ class FlexExpand extends StatelessWidget {
   }
 
   Widget _buildExpanded() {
+    // SizeBox: A box with a specified size.
     return SizedBox(
       height: 100,
       child: Row(
         children: <Widget>[
           LabeledContainer(
             width: 100,
-            height: double.infinity,
             color: Colors.green,
             text: '100',
           ),
@@ -50,7 +56,6 @@ class FlexExpand extends StatelessWidget {
           ),
           LabeledContainer(
             width: 40,
-            height: double.infinity,
             color: Colors.green,
             text: '40',
           )
@@ -60,9 +65,42 @@ class FlexExpand extends StatelessWidget {
   }
 
   Widget _buildFlexible() {
+    // SizeBox: A box with a specified size.
     return SizedBox(
       height: 100,
       child: Row(
+        children: <Widget>[
+          Flexible(
+            flex: 1,
+            child: LabeledContainer(
+              color: Colors.orange,
+              text: '25%',
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: LabeledContainer(
+              color: Colors.deepOrange,
+              text: '25%',
+            ),
+          ),
+          Flexible(
+            flex: 2,
+            child: LabeledContainer(
+              color: Colors.blue,
+              text: '50%',
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildFlexibleColumn() {
+    // SizeBox: A box with a specified size.
+    return SizedBox(
+      height: 100,
+      child: Column(
         children: <Widget>[
           Flexible(
             flex: 1,
@@ -111,8 +149,10 @@ class FlexExpand extends StatelessWidget {
     );
   }
 
+  // returns two widgets, so we use an Iterable
   Iterable<Widget> _header(BuildContext context, String text) {
     return [
+      // A nice widget to create an space
       SizedBox(height: 20),
       Text(
         text,

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class LabeledContainer extends StatelessWidget {
   final double? width;
-  final double height;
+  final double? height;
   final Color color;
   final String text;
   final Color? textColor;
   const LabeledContainer({
     this.width,
-    this.height = double.infinity,
+    this.height,
     required this.color,
     required this.text,
     this.textColor,
