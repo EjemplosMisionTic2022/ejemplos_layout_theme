@@ -5,13 +5,18 @@ class SimpleList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      padding: EdgeInsets.all(8),
-      children: <Widget>[
-        row(600, 'Entry A'),
-        row(500, 'Entry B'),
-        row(100, 'Entry C'),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('List on Flutter'),
+      ),
+      body: ListView(
+        padding: EdgeInsets.all(8),
+        children: <Widget>[
+          row(600, 'Entry A'),
+          row(500, 'Entry B'),
+          row(100, 'Entry C'),
+        ],
+      ),
     );
   }
 
