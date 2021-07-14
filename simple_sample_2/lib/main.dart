@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dynamic_list.dart';
 import 'list_builder.dart';
 import 'simple_list.dart';
+import 'stylized_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
       ),
       //home: SimpleList(),
       //home: ListBuilder()
-      home: DynamicList(),
+      //home: DynamicList(),
+      home: StylizedCard(),
     );
   }
 }
