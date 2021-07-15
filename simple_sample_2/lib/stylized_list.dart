@@ -45,6 +45,16 @@ class _StylizedCardState extends State<StylizedCard> {
   Widget _row(Human human, int index) {
     return Dismissible(
         key: UniqueKey(),
+        background: Container(
+            color: Colors.red,
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                "Deleting",
+                style: TextStyle(color: Colors.white),
+              ),
+            )),
         child: _card(human),
         onDismissed: (direction) {
           // Remove the item from the data source.
