@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+import 'theme/theme.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,11 +14,19 @@ class HomePage extends StatelessWidget {
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Center(child: Text('My text')),
-          ElevatedButton(onPressed: () {}, child: Text('Some button'))
+          ElevatedButton(
+              onPressed: () {
+                Get.changeThemeMode(
+                    Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+              },
+              child: Text('Change theme'))
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
       ),
     );
   }

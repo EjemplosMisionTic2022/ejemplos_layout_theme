@@ -1,17 +1,32 @@
 import 'package:flutter/material.dart';
+import 'colors.dart';
+import 'text_styles.dart';
 
 class MyTheme {
+  final ligthTheme2 = ThemeData.light().copyWith(
+    primaryColor: Colors.blueGrey,
+  );
+
+  final darkTheme2 = ThemeData.dark().copyWith(
+    primaryColor: Colors.blueGrey,
+  );
+
   static ThemeData get ligthTheme {
     return ThemeData(
         brightness: Brightness.light,
-        primaryColor: Colors.blueGrey[900],
-        accentColor: Colors.blueGrey,
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'Montserrat',
+        primarySwatch: AppColors.CreateMaterialColor(AppColors.primaryColor),
+
+        //accentColor: AppColors.ligthPrimaryColor,
+        //primaryColor: AppColors.primaryColor,
+        //primaryColor: Colors.blueGrey[900],
+        //accentColor: Colors.blueGrey,
+        //scaffoldBackgroundColor: Colors.white,
+        //fontFamily: 'Montserrat',
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            onPrimary: Colors.white,
-            primary: Colors.blueGrey[900],
+            //onPrimary: Colors.white,
+            //primary: AppColors.ligthPrimaryColor,
+            textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
         inputDecorationTheme: InputDecorationTheme(
@@ -19,54 +34,56 @@ class MyTheme {
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            onPrimary: Colors.blueGrey,
-            primary: Colors.blueGrey[900],
+            //onPrimary: Colors.blueGrey,
+            //primary: Colors.blueGrey[900],
+            textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            primary: Colors.blueGrey,
+            //primary: Colors.blueGrey,
+            textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
         textTheme: TextTheme(
-          headline1: TextStyle(
-              fontSize: 24.0, fontFamily: 'Hind', fontWeight: FontWeight.bold),
-          bodyText2: TextStyle(fontSize: 18.0, fontFamily: 'Hind'),
+          headline1: AppTextStyle.appBarTitle,
+          bodyText2: AppTextStyle.appBodyText,
         ));
   }
 
   static ThemeData get darkTheme {
     return ThemeData(
         brightness: Brightness.dark,
-        primaryColor: Colors.blueGrey[900],
-        accentColor: Colors.blueGrey,
-        scaffoldBackgroundColor: Colors.grey,
-        fontFamily: 'Montserrat',
+        //primarySwatch: AppColors.CreateMaterialColor(Color(0xFF607D8B)),
+        accentColor: AppColors.AccentColorDarkTheme,
+        //primaryColor: AppColors.darkPrimaryColor,
+        //fontFamily: 'Montserrat',
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(
-            onPrimary: Colors.white,
-            primary: Colors.blueGrey[900],
-          ),
-        ),
+            style: ElevatedButton.styleFrom(
+          primary: AppColors.AccentColorDarkTheme,
+          textStyle: AppTextStyle.defaultFontStyle,
+        )),
         inputDecorationTheme: InputDecorationTheme(
           fillColor: Colors.grey.shade300,
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            onPrimary: Colors.blueGrey,
-            primary: Colors.blueGrey[900],
+            //onPrimary: Colors.blueGrey,
+            //primary: Colors.blueGrey[900],
+            textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            primary: Colors.white,
+            //primary: Colors.white,
+            textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
+        floatingActionButtonTheme:
+            FloatingActionButtonThemeData(foregroundColor: Colors.white),
         textTheme: TextTheme(
-          headline1: TextStyle(
-              fontSize: 24.0, fontFamily: 'Hind', fontWeight: FontWeight.bold),
-          bodyText2: TextStyle(
-              fontSize: 18.0, fontFamily: 'Hind', color: Colors.white),
+          headline1: AppTextStyle.appBarTitle,
+          bodyText2: AppTextStyle.appBodyText,
         ));
   }
 }
