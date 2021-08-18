@@ -32,35 +32,35 @@ class MyTheme {
   }
 
   // on DarkMode the Swatch parameter is not working
+  // https://github.com/flutter/flutter/issues/19089
   static ThemeData get darkTheme {
     return ThemeData(
         brightness: Brightness.dark,
-        accentColor: AppColors.AccentColorDarkTheme,
+        primarySwatch: AppColors.CreateMaterialColor(AppColors.primaryColor),
+        accentColor:
+            AppColors.CreateMaterialColor(AppColors.primaryColor).shade500,
+        toggleableActiveColor:
+            AppColors.CreateMaterialColor(AppColors.primaryColor).shade500,
+
+        // this can all be copied, waiting for verification
         elevatedButtonTheme: ElevatedButtonThemeData(
             style: ElevatedButton.styleFrom(
-          primary: AppColors.AccentColorDarkTheme,
           textStyle: AppTextStyle.defaultFontStyle,
         )),
-        inputDecorationTheme: InputDecorationTheme(
-          fillColor: Colors.grey.shade300,
-        ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            primary: AppColors.AccentColorDarkTheme,
             textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            primary: AppColors.AccentColorDarkTheme,
             textStyle: AppTextStyle.defaultFontStyle,
           ),
         ),
-        floatingActionButtonTheme:
-            FloatingActionButtonThemeData(foregroundColor: Colors.white),
-        textTheme: TextTheme(
-          headline1: AppTextStyle.appBarTitle,
-          bodyText2: AppTextStyle.appBodyText,
-        ));
+        floatingActionButtonTheme: FloatingActionButtonThemeData(),
+
+        // copy from ligthTheme
+        inputDecorationTheme: ligthTheme.inputDecorationTheme,
+        textTheme: ligthTheme.textTheme);
   }
 }

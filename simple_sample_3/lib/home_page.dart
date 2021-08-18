@@ -21,7 +21,19 @@ class HomePage extends StatelessWidget {
                 Get.changeThemeMode(
                     Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
               },
-              child: Text('Change theme'))
+              child: Text('ElevatedButton - Change theme')),
+          OutlinedButton(
+              onPressed: () {
+                Get.changeThemeMode(
+                    Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+              },
+              child: Text('Outlined Button')),
+          TextButton(
+              onPressed: () {
+                Get.changeThemeMode(
+                    Get.isDarkMode ? ThemeMode.light : ThemeMode.dark);
+              },
+              child: Text('Text Button')),
         ],
       ),
       floatingActionButton: FloatingActionButton(
