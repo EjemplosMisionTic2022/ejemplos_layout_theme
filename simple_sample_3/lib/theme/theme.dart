@@ -61,6 +61,9 @@ class MyTheme {
 
         // copy from ligthTheme
         inputDecorationTheme: ligthTheme.inputDecorationTheme,
-        textTheme: ligthTheme.textTheme);
+        textTheme: TextTheme(
+          headline1: AppTextStyle.appBarTitle,
+          bodyText2: AppTextStyle.appBodyText,
+        ));
   }
 }
