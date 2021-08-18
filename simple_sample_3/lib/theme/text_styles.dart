@@ -4,15 +4,23 @@ import 'colors.dart';
 
 class AppTextStyle {
   // Static getters for text styles
-  static TextStyle get appBarTitle => GoogleFonts.openSans(
+
+  static String? get fontFamily => GoogleFonts.openSans().fontFamily;
+  //static String? get fontFamily => GoogleFonts.yanoneKaffeesatz().fontFamily;
+
+  // Google font
+  static TextStyle get defaultFontStyle => GoogleFonts.openSans();
+
+  static TextStyle get headline1 => GoogleFonts.openSans(
         fontSize: 18.0,
         fontWeight: FontWeight.w700,
       );
+
   static TextStyle get cardTitle => GoogleFonts.openSans(
         fontSize: 16.0,
         fontWeight: FontWeight.w600,
       );
-  static TextStyle get cardContent => GoogleFonts.roboto(
+  static TextStyle get cardContent => GoogleFonts.openSans(
         fontSize: 16.0,
       );
   static TextStyle get cardDetails => GoogleFonts.openSans(
@@ -25,7 +33,4 @@ class AppTextStyle {
         fontSize: 18.0,
         fontWeight: FontWeight.w700,
       );
-
-  // Google font
-  static TextStyle get defaultFontStyle => GoogleFonts.openSans();
 }
