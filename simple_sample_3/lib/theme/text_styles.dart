@@ -3,14 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'colors.dart';
 
 class AppTextStyle {
-  // Static getters for text styles
-
   static String? get fontFamily => GoogleFonts.openSans().fontFamily;
   //static String? get fontFamily => GoogleFonts.yanoneKaffeesatz().fontFamily;
 
   // Google font
   static TextStyle get defaultFontStyle => GoogleFonts.openSans();
 
+  // if we need to change a style
   static TextStyle get headline1 => GoogleFonts.openSans(
         fontSize: 18.0,
         fontWeight: FontWeight.w700,
