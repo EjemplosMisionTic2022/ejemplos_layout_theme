@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // Static color constants
-  static const Color primaryColor = Color(0xFF33691e);
-  static const Color darkPrimaryColor = Color(0xFF629749);
-  static const Color ligthPrimaryColor = Color(0xFF629749);
-  static const Color TextPrimaryColor = Color(0xFF212121);
-  static const Color TextSecondaryColor = Color(0xFF757575);
-  static const Color AccentColorDarkTheme = Color(0xFF9E9E9E);
+  static const Color primaryColor = Color(0xFF795548);
+  static const Color accentColor = Color(0xFFFF5722);
 
   static MaterialColor CreateMaterialColor(Color color) {
     List strengths = <double>[.05];

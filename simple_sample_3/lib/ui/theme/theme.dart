@@ -7,6 +7,7 @@ class MyTheme {
     return ThemeData(
       brightness: Brightness.light,
       primarySwatch: AppColors.CreateMaterialColor(AppColors.primaryColor),
+      accentColor: AppColors.accentColor,
       fontFamily: AppTextStyle.fontFamily,
 
       elevatedButtonTheme: ElevatedButtonThemeData(
@@ -41,8 +42,7 @@ class MyTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: AppColors.CreateMaterialColor(AppColors.primaryColor),
-      accentColor:
-          AppColors.CreateMaterialColor(AppColors.primaryColor).shade500,
+      accentColor: AppColors.accentColor,
       toggleableActiveColor:
           AppColors.CreateMaterialColor(AppColors.primaryColor).shade500,
 

@@ -2,9 +2,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:simple_sample_3/home_page.dart';
-
-import 'theme/theme.dart';
+import 'package:simple_sample_3/ui/pages/home_page.dart';
+import 'package:simple_sample_3/ui/theme/theme.dart';
 
 void main() {
   LicenseRegistry.addLicense(() async* {
