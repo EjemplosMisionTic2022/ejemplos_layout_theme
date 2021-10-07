@@ -4,21 +4,20 @@ import 'labeled_container.dart';
 
 class FlexExpand extends StatelessWidget {
   const FlexExpand({Key? key}) : super(key: key);
-
+  // Expanded class:  widget que expande un hijo de una Fila, Columna o Flex para que el hijo llene el espacio disponible.
   @override
   Widget build(BuildContext context) {
-    // The safeArea lowers the child widgets below the OS data like clock of nutches
+    // El safeArea es un widget que inserta a su hijo con suficiente relleno para evitar intrusiones del sistema operativo
     return SafeArea(
       child: Scaffold(
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ..._header(context, 'Expanded'),
-            //The Expanded widget will take up all the remaining unconstrained space from a Row or
-            //a Column.
+            //El widget Expandido ocupará todo el espacio restante sin restricciones de fila o columna
             _buildExpanded(),
             ..._header(context, 'Flexible'),
-            // similar to Expanded, but it can also use the flex parameter to calculate the weight of each
+            // similar a Expanded, pero también puede utilizar el parámetro flex para calcular el peso de cada
             // widget
             _buildFlexible(),
             Expanded(
@@ -37,7 +36,7 @@ class FlexExpand extends StatelessWidget {
   }
 
   Widget _buildExpanded() {
-    // SizeBox: A box with a specified size.
+    // SizeBox: Una caja con un tamaño especifico.
     return SizedBox(
       height: 100,
       child: Row(
@@ -65,7 +64,7 @@ class FlexExpand extends StatelessWidget {
   }
 
   Widget _buildFlexible() {
-    // SizeBox: A box with a specified size.
+    // SizeBox: Una caja con un tamaño especifico.
     return SizedBox(
       height: 100,
       child: Row(
@@ -97,7 +96,7 @@ class FlexExpand extends StatelessWidget {
   }
 
   Widget _buildFlexibleColumn() {
-    // SizeBox: A box with a specified size.
+    // SizeBox: Una caja con un tamaño especifico.
     return SizedBox(
       height: 100,
       child: Column(
@@ -149,10 +148,10 @@ class FlexExpand extends StatelessWidget {
     );
   }
 
-  // returns two widgets, so we use an Iterable
+  // devuelve dos widgets, por lo que utilizamos un Iterable
   Iterable<Widget> _header(BuildContext context, String text) {
     return [
-      // A nice widget to create an space
+      // Un bonito widget para crear un escenario
       SizedBox(height: 20),
       Text(
         text,
