@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_sample_1/flex_exp.dart';
+import 'package:simple_sample_1/ui/widgets/flex_exp.dart';
 
 void main() {
   runApp(MyApp());

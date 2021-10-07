@@ -1,7 +1,7 @@
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
-import 'human.dart';
+import '../../domain/models/human.dart';
 
 class StylizedCard extends StatefulWidget {
   StylizedCard({Key? key}) : super(key: key);

@@ -17,7 +17,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // To use the GetX libary we nee
+    // To use the GetX libary we need
     // to use GetMaterialApp
     return GetMaterialApp(
         title: 'Flutter Theme Demo',

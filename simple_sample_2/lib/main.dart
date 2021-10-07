@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'dynamic_list.dart';
-import 'list_builder.dart';
-import 'simple_list.dart';
-import 'stylized_list.dart';
+import 'ui/widgets/dynamic_list.dart';
+import 'ui/widgets/list_builder.dart';
+import 'ui/widgets/simple_list.dart';
+import 'ui/widgets/stylized_list.dart';
 
 void main() {
   runApp(MyApp());
