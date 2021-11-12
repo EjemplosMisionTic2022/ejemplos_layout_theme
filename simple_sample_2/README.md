@@ -12,7 +12,7 @@ Implementación del ListViewBuilder
 
 Implementación de un ListViewBuilder en el que se pueden agregar entradas (usando un Widget con estado)
 
-<img src="dynamicListView.png" width="300" />
+<img src="dynamicListView.gif" width="300" />
 
 Por último, una implementación en la que las filas tienen una estructura más compleja 
 
